@@ -1,0 +1,27 @@
+.card-destino .card-title {
+    background-position: left top;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    padding-left: 2rem;
+}
+
+.card-disney .card-title {
+    background-image: url(../img/simbolos/mickey-mouse.png);
+}
+
+.card-noronha .card-title {
+    background-image: url(../img/simbolos/praia.png);
+}
+
+.card-america-sul .card-title {
+    background-image: url(../img/simbolos/america-do-sul.png);
+}
+
+.card-europa .card-title {
+    background-image: url(../img/simbolos/marco.png);
+}
+
+.btn-news {
+    height: calc(3.5rem + calc(var(--bs-border-width)* 2));
+    min-height: calc(3.5rem + calc(var(--bs-border-width)* 2));
+}
