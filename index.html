@@ -4,314 +4,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="img/favicon-qv.png">
   <title>Que Viagem - Página Inicial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="sticky-top bg-warning">
-    <!-- navbar -->
-    <nav class="container navbar navbar-expand-lg">
-      <a class="navbar-brand" href="index.html" title="Que viagem - Página inicial">
-        <img src="img/logo.png" alt="logo que viagem">
-      </a>
-      <button title="Abrir e Fechar menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir e Fechar menu">
-        <i class="bi bi-list"></i>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #D89E00;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Que Viagem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse px-3 px-md-0" id="menuPrincipal">
-        <ul class="navbar-nav mx-auto fw-bold">
-          <li class="me-0 me-md-4 nav-item">
-            <a class="text-dark nav-link" href="index.html">
-              <i class="bi bi-house me-2"></i>Página Inicial
-            </a>
-          </li>
-          <li class="me-0 me-md-4 nav-item">
-            <a class="text-dark nav-link" href="destinos.html">
-              <i class="bi bi-pin-map me-2"></i>Destinos
-            </a>
-          </li>
-          <li class="me-0 me-md-4 nav-item">
-            <a class="text-dark nav-link" href="promocoes.html">
-              <i class="bi bi-tag me-2"></i>Promoções
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="text-dark nav-link" href="contato.html"><i
-                class="bi bi-megaphone me-2"></i>Contato
-            </a>
-          </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
         </ul>
-        <div class="mt-3 mt-md-0 d-flex align-items-center">
-          <form role="search" class="bg-white p-2 rounded d-flex w-75">
-            <label for="search" class="visually-hidden-focusable overflow-hidden">Pesquisar</label>
-            <input class="border-0 w-75" type="search" id="search" placeholder="Exemplo: Olinda" aria-label="Search">
-            <div class="vr"></div>
-            <button class="w-25 btn btn-link" title="Fazer pesquisa" type="submit">
-              <i class="mx-auto d-blog bi bi-search"></i>
-            </button>
-          </form>
-          <div class="text-center w-25">
-            <a href="#" class="btn btn-link text-decoration-none text-dark">Entrar</a>
-          </div>
-        </div>
       </div>
-    </nav>
-    <!-- fim navbar  -->
-  </header>
-  <main>
-    <section id="carouselIndicators" class="carousel slide">
+    </div>
+  </nav>
+
+  <!-- Hero Section com Carousel -->
+  <header>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active"><img src="img/carrossel/carrossel1.png" class="d-block w-100"
-            alt="carrossel - 1"></div>
-        <div class="carousel-item"> <img src="img/carrossel/carrossel2.png" class="d-block w-100" alt="carrossel - 2">
+        <div class="carousel-item active">
+          <div class="carousel-image-container">
+            <img src="img/carrossel/carrossel1.png" class="d-block w-100" alt="Destino 1">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4 text-white">Descubra o mundo</h1>
+              <p class="lead text-white">Pacotes incríveis para você explorar destinos únicos.</p>
+              <a href="#destinos" class="btn btn-primary btn-lg">Confira</a>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item"> <img src="img/carrossel/carrossel3.png" class="d-block w-100" alt="carrossel - 3">
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="img/carrossel/carrossel2.png" class="d-block w-100" alt="Destino 2">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4 text-white">Aventura te espera</h1>
+              <p class="lead text-white">Experimente viagens inesquecíveis com a Que Viagem.</p>
+              <a href="sobre.html" class="btn btn-primary btn-lg">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img src="img/carrossel/carrossel3.png" class="d-block w-100" alt="Destino 3">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4 text-white">Conforto e qualidade</h1>
+              <p class="lead text-white">Viagens planejadas para o seu bem-estar.</p>
+              <a href="contato.html" class="btn btn-primary btn-lg">Entre em Contato</a>
+            </div>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
-        data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden">Anterior</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
-        data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden">Próximo</span>
       </button>
-    </section>
+    </div>
+    
+  </header>
 
-    <section id="pesquisar-ofertas" class="container border-bottom py-5 my-5">
-      <form>
-        <fieldset class="d-flex justify-content-center flex-column">
-          <legend class="text-center ">
-            <h2>Encontre as melhores ofertas</h2>
-          </legend>
-          <div class=" pt-5 justify-content-center row">
-            <div class="col-6 col-md-3 mb-3 mb-md-0">
-              <label class="visually-hidden" for="autoSizingInput">Origem</label>
-              <label for="local"> Local de origem</label>
-              <input type="text" class="form-control" id="local" placeholder="Cidade ou Aeroporto">
-            </div>
-            <div class="col-6 col-md-3 mb-3 mb-md-0">
-              <label class="visually-hidden" for="autoSizingInput">Destino</label>
-              <label for="destino"> Local de destino</label>
-              <input type="text" class="form-control" id="destino" placeholder="Cidade ou Aeroporto">
-            </div>
-            <div class="col-6 col-md-2 mb-3 mb-md-0">
-              <label class="visually-hidden" for="autoSizingInput">Ida</label>
-              <label for="ida"> Data da ida</label>
-              <input type="date" class="form-control" id="ida" placeholder="Local de destino">
-            </div>
-            <div class="col-6 col-md-2 mb-3 mb-md-0">
-              <label class="visually-hidden" for="autoSizingInput">Volta</label>
-              <label for="volta"> Data da volta</label>
-              <input type="date" class="form-control" id="volta" placeholder="Local de destino">
-            </div>
-            <div class="col-auto align-items-end d-flex pb-3">
-              <button type="submit" class="btn btn-danger" style="margin-bottom:-1em ;">Buscar</button>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-
-    <section id="mais-procurados" class="container">
-      <h2 class="text-center">Conheça os destinos mais procurados</h2>
-      <ul class="row list-unstyled pt-5 ">
-        <li class="col-6 col-md-6 col-lg-3 mb-3">
-            <div class="card w-100 h-100 card-destino card-disney position-relative">
-              <img src="img/locais/disney.png" class="card-img-top" alt="Foto Orlando">
-              <div class="card-body">
-                <h3 class="card-title">Orlando</h3>
-                <p class="card-text">Viva toda a magia e emoção únicas e inesquecíveis</p>
-                <a title="Saiba mais sobre como viajar para Orlando" class="stretched-link" href="destinos.html">
-                  Saiba mais<i class="ms-2 bi bi-arrow-up-right"></i></a>
-              </div>
-            </div>
-        </li>
-        <li class="col-6 col-md-6 col-lg-3 mb-3">
-          <div class="card w-100 h-100 card-destino card-noronha position-relative">
-            <img src="img/locais/noronha.png" class="card-img-top" alt="Foto Noronha">
+  <!-- Seção de Destinos em Destaque -->
+  <section id="destinos" class="py-5"><div class="py-5"></div>
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Destinos em Destaque</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="img/locais/paris.jpg" class="card-img-top" alt="Paris">
             <div class="card-body">
-              <h3 class="card-title">Noronha</h3>
-              <p class="card-text">Explore um paraíso tropical intocado e indescritível</p>
-              <a title="Saiba mais sobre como viajar para Noronha" class="stretched-link" href="destinos.html">Saiba
-                mais<i class="ms-2 bi bi-arrow-up-right"></i></a>
+              <h5 class="card-title">Paris</h5>
+              <p class="card-text">A cidade luz com nossos pacotes exclusivos.</p>
+              <a href="viagem.html" class="btn btn-outline-primary">Ver Mais</a>
             </div>
           </div>
-        </li>
-        <li class="col-6 col-md-6 col-lg-3 mb-3">
-          <div class="card w-100 h-100 card-destino card-america-sul position-relative">
-            <img src="img/locais/americasul.png" class="card-img-top" alt="Foto America do Sul">
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="img/locais/fernando.jpg" class="card-img-top" alt="Fernando de Noronha">
             <div class="card-body">
-              <h3 class="card-title">América do Sul</h3>
-              <p class="card-text"> Curta uma incrível e encantadora diversidade</p>
-              <a title="Saiba mais sobre como viajar para Sul" class="stretched-link" href="destinos.html">Saiba
-                mais<i class="ms-2 bi bi-arrow-up-right"></i></a>
+              <h5 class="card-title">Fernando de Noronha</h5>
+              <p class="card-text">Um paraíso tropical espera por você.</p>
+              <a href="viagem.html" class="btn btn-outline-primary">Ver Mais</a>
             </div>
           </div>
-        </li>
-        <li class="col-6 col-md-6 col-lg-3 mb-3">
-          <div class="card w-100 h-100 card-destino card-europa position-relative">
-            <img src="img/locais/europa.png" class="card-img-top" alt="Foto Europa">
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="img/locais/ny.jpg" class="card-img-top" alt="Nova York">
             <div class="card-body">
-              <div class="test">
-                <h3 class="card-title">Europa</h3>
-                <p class="card-text">Viaje através da história e cultura riquíssimas</p>
-              </div>
-              <a title="Saiba mais sobre como viajar para Europa" class="stretched-link" href="destinos.html">Saiba
-                mais<i class="ms-2 bi bi-arrow-up-right"></i></a>
+              <h5 class="card-title">Nova York</h5>
+              <p class="card-text">A Big Apple está ao seu alcance.</p>
+              <a href="viagem.html" class="btn btn-outline-primary">Ver Mais</a>
             </div>
           </div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="nacionais" class="container border-top py-5 my-5">
-      <h2 class="text-center">
-        
-        <img src="https://github.com/EmilyCavalcanti/QueViagem/blob/main/queviagem-site/src/assets/mapabrasil1.png?raw=true" class="mapa-brasil me-3">
-        Ofertas nacionais!</h2>
-      <ul class="row list-unstyled pt-5 " id="nacionais">
-        <li class="col-6 col-md-6 col-lg-4 mb-3">
-          <div class="card w-100 h-100">
-            <h3 class="card-header fw-bold bg-dark text-white h6">30% OFF</h3>
-            <img src="img/banner/rio.png" alt="Card Rio">
-            <div class="card-body" id="card-body-nacional">
-              <h4 class="card-title text-uppercase">Rio de Janeiro</h4>
-              <p class="card-text">5 dias incluindo:</p>
-              <p> Aéreo + Hospedagem + Pensão completa + Passeio + </p>
-              <a href="#" class="btn btn-outline-dark">Aproveitar oferta</a>
-            </div>
-          </div>
-        </li>
-        <li class="col-6 col-md-6 col-lg-4 mb-3">
-          <div class="card w-100 h-100">
-            <h3 class="card-header fw-bold bg-dark text-white h6">15% OFF</h3>
-            <img src="img/banner/gramado.png" alt="Card Gramado">
-            <div class="card-body" id="card-body-nacional">
-              <h4 class="card-title text-uppercase">Gramado</h4>
-              <p class="card-text">5 dias incluindo: </p>
-              <p>Áereo + Hospedagem + Café da manhã + Translado + Ingresso </p>
-              <a href="#" class="btn btn-outline-dark">Aproveitar oferta</a>
-            </div>
-          </div>
-        </li>
-        <li class="col-6 col-md-6 col-lg-4 mb-3">
-          <div class="card w-100 h-100">
-            <h3 class="card-header fw-bold bg-dark text-white h6">25% OFF</h3>
-            <img src="img/banner/fortaleza.png" alt="Card Fortaleza">
-            <div class="card-body" id="card-body-nacional">
-              <h4 class="card-title text-uppercase">Fortaleza</h4>
-              <p class="card-text">4 dias incluindo: </p>
-              <p>Aéreo + Hospedagem + Café da manhã + Passeio + Ingressos</p>
-              <a href="#" class="btn btn-outline-dark">Aproveitar oferta</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="text-bg-primary d-flex align-items-center flex-column py-5" id="destaquemes">
-      <h2> Destaque do mês: <u>Pernambuco</u></h2>
-      <div class="container">
-        <ul class="row list-unstyled pt-5 ">
-          <li class="col-6 col-md-6 mb-3">
-            <div class="card border-0 shadow-sm w-100 h-100">
-              <h3 class="card-header fw-bold h5">Olinda</h3>
-              <img src="img/locais/olinda.png" alt="Foto de Olinda">
-              <div class="card-body">
-                <p class="card-text">Encante-se com a atmosfera colonial e as coloridas ladeiras de Olinda, uma cidade
-                  histórica repleta de cultura, arte e festividades brasileiras.</p>
-              </div>
-            </div>
-          </li>
-          <li class="col-6 col-md-6 mb-3">
-            <div class="card border-0 shadow-sm w-100 h-100">
-              <h3 class="card-header fw-bold h5">Porto de Galinhas</h3>
-              <img src="img/locais/portodegalinhas.jpeg" alt="Foto Porto de Galinhas">
-              <div class="card-body">
-                <p class="card-text">Relaxe em praias paradisíacas e águas cristalinas de Porto de Galinhas, um destino
-                  deslumbrante que combina tranquilidade, diversão e mergulhos inesquecíveis.</p>
-              </div>
-            </div>
-          </li>
-          <li class="col-6 col-md-6 mb-3">
-            <div class="card border-0 shadow-sm w-100 h-100">
-              <h3 class="card-header fw-bold h5">Catimbau</h3>
-              <img src="img/locais/catimbau.png" alt="Foto Catimbau">
-              <div class="card-body">
-                <p class="card-text"> Explore o incrível cenário do Parque Nacional do Catimbau, onde formações rochosas
-                  únicas e paisagens exuberantes convidam a descobrir a beleza do sertão.</p>
-              </div>
-            </div>
-          </li>
-          <li class="col-6 col-md-6 mb-3">
-            <div class="card border-0 shadow-sm w-100 h-100">
-              <h3 class="card-header fw-bold h5">Recife</h3>
-              <img src="img/locais/recifee.png" alt=" Foto Europa">
-              <div class="card-body">
-                <p class="card-text"> Viva a energia vibrante de Recife, a capital do frevo e do maracatu, onde a
-                  modernidade se funde com a rica herança cultural do nordeste brasileiro.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="final" class="container">
-      <div class="text-center p-2 my-4">
-        <img alt="redes" class="img-rede-social" src="img/redesocial.png" style="width: 3rem">
-        <h2 class="my-3 fs-5">Junte-se à QUE VIAGEM nas redes sociais</h2>
-        <ul class="px-0 pt-3 list-unstyled d-flex fs-3 justify-content-center">
-          <li class="mx-3"><a style="color: #c13584" href="http://instagram.com/que-viagem"><i
-                class="bi bi-instagram"></i></a></li>
-          <li class="mx-3"><a style="color: #1877f2" href="http://facebook.com/que-viagem"><i
-                class="bi bi-facebook"></i></a></li>
-          <li class="mx-3"><a style="color: #111111" href="http://threads.com/que-viagem"><i
-                class="bi bi-threads"></i></a></li>
-          <li class="mx-3"><a style="color: #1da1f2" href="http://twitter.com/que-viagem"><i
-                class="bi bi-twitter"></i></a></li>
-        </ul>
-        <div class="mt-5 py-5 mx-auto col-12 col-md-6 text-center">
-          <img src="img/nest.png" width="200px" alt="news">
-          <fieldset>
-            <legend class="d-block mt-3 mb-5 fs-5 fw-light">Que ficar por dentro de todas as novidades e promoções?
-              Inscreva-se e receba tudo em primeira mão!</legend>
-            <form class="row">
-              <div class="col-9 ps-2">
-                <div class="form-floating mb-md-0  mb-3">
-                  <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-                  <label for="email">Digite seu e-mail</label>
-                </div>
-              </div>
-              <div class="col-3 d-flex align-items-end pb-3"> <button class="w-100 btn-news btn btn-danger"
-                  type="submit">Enviar</button></div>
-            </form>
-          </fieldset>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="mt-5 text-center p-3 bg-body-tertiary">
-    <p>2023 © Desenvolvido por <strong>Emily Cavalcanti</strong> | <strong>Recode Pro</strong></p>
-    <a href="#"> Voltar ao topo</a>
     </div>
+ <div class="py-5"></div> </section>
 
+  <!-- Benefícios -->
+  <section class="bg-light py-5"><div class="py-5"></div>
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Por que escolher a Que Viagem?</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="bi bi-airplane-fill display-4 text-primary"></i>
+          <h5 class="mt-3">Viagens Personalizadas</h5>
+          <p>Montamos pacotes que atendem todas as suas necessidades.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-geo-alt-fill display-4 text-primary"></i>
+          <h5 class="mt-3">Destinos Incríveis</h5>
+          <p>Explore os lugares mais fascinantes ao redor do mundo.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-award-fill display-4 text-primary"></i>
+          <h5 class="mt-3">Qualidade Garantida</h5>
+          <p>Viagens com conforto e segurança.</p>
+        </div>
+      </div>
+    </div>
+ <div class="py-5"></div> </section>
+
+  <!-- Call to Action -->
+  <section class="py-5 text-center" style="background-color: #D89E00; color: #fff;"><div class="py-5"></div>
+    <h2 class="fw-bold">Pronto para embarcar?</h2>
+    <p class="lead">Encontre o pacote perfeito para sua próxima aventura.</p>
+    <a href="contato.html" class="btn btn-light btn-lg">Fale Conosco</a>
+ <div class="py-5"></div> </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2024 Que Viagem - Todos os direitos reservados</p>
+      <a href="#" class="text-light">Voltar ao topo</a>
+    </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
